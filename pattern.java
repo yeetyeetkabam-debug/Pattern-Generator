@@ -17,7 +17,8 @@ while(starCount < totalStars) {
 
      System.out.println();
      currentRow++;
- }
+ }System.out.println();
+
 }
 
 public static void triangle(int rows){
@@ -36,26 +37,29 @@ currentRow++;
 
 
 
- }
+ }System.out.println();
+
 }
 
 public static void odds(int start){
-    int currentRow = start;
-while (currentRow >= 0) {
-     int count =  currentRow;
-     int number = 0;
-while (number < count && ((number % 2) != 0)) {
-     System.out.print(count);
-     number++;
+    int currentRow = 0;
+for(currentRow = start; currentRow >= 0; currentRow--) {
+    
+for ( int number = 0; number < currentRow; number++) {
+    
+    if((currentRow % 2) != 0) {
+     System.out.print(currentRow); }
 
 }
-System.out.println();
-currentRow--;
+if((currentRow % 2) != 0) {
+     System.out.println(); }
+     
 
 
 
 
- }
+ }System.out.println();
+
 }
 
 
