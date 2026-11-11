@@ -3,8 +3,10 @@ import java.util.*;
 //A collection of methods that create different patterns using loops.
 //Used to practice loops for ap exam.
 public class pattern {
-// Prints rows of stars increasing by two stars per row.
-// Parameter rows, the number of rows to print.
+
+     
+//Precondition: Parameter rows, the number of rows to print.
+//Postcondition: Prints rows of stars increasing by two stars per row.
 public static void stars(int rows){
      int currentRow = 1;
 while (currentRow <= rows) {
@@ -21,8 +23,8 @@ while(starCount < totalStars) {
  }System.out.println();
 
 }
- // Prints a triangle with each row's number repeated that many times.
- // Parameter rows, the number of rows to print.
+ //Precondition: Parameter rows, the number of rows to print.
+//Postcondition: Prints a triangle with each row's number repeated that many times. 
 public static void triangle(int rows){
      int currentRow = 1;
 while (currentRow <= rows) {
@@ -42,9 +44,10 @@ currentRow++;
  }System.out.println();
 
 }
-// Prints odd numbers in descending order.
-// Each odd number is repeated that many times on its own line.
-// Parameter start, the starting number
+
+//Precondition:  Parameter start, the starting number     
+//Postcondition: Prints odd numbers in descending order.
+//Postcondition: Each odd number is repeated that many times on its own line.
 public static void odds(int start){
     int currentRow = 0;
 for(currentRow = start; currentRow >= 0; currentRow--) {
@@ -63,15 +66,17 @@ if((currentRow % 2) != 0) {
 
 
  }System.out.println(); }
-// Prints alternating rows of E and O that increase and then decrease.
-// The longest row always contains E.
-// Parameter, maxE the number of letters in the longest row.
+
+//Precondition: Parameter, maxE the number of letters in the longest row.     
+//Postcondition: Prints alternating rows of E and O that increase and then decrease.
+//Postcondition: The longest row always contains E.
+//Postcondition: Prints the increasing half, and the longest row
 public static void eo(int maxE){
 
 if (maxE%2 != 0)
 {
 int max = maxE;
-// Prints the increasing half, and the longest row
+
 
 for (int i = 1; i<=max; i++ ) {
 if (i % 2 != 0) {
@@ -92,7 +97,6 @@ if (i % 2 != 0) {
 
 System.out.println();
 }
-// Prints the decreasing half.
 
 for (int i = max - 1; i >= 1; i--) {
     if (i % 2 != 0) {
@@ -119,7 +123,6 @@ for (int i = max - 1; i >= 1; i--) {
 
 
 else { int max2 = maxE;
-// Prints the increasing half, and the longest row
 for (int i = 1; i<=max2; i++ ) {
 if (i % 2 != 0) {
    for(int k = 0 ; i > k ; k++) {
@@ -136,7 +139,6 @@ if (i % 2 != 0) {
 
 System.out.println();
 }
-// Prints the decreasing half.
 
 for (int i = max2 - 1; i >= 1; i--) {
     if (i % 2 != 0) {
@@ -172,8 +174,8 @@ System.out.println();
 
 }
 
-// Prints an upside down number pyramid with increasing indentation.
-// Parameter: rows, the number of rows in the pyramid.
+//Precondition: Parameter: rows, the number of rows in the pyramid.
+//Postcondition: Prints an upside down number pyramid with increasing indentation.
 public static void pyramid(int rows){
     
 int numberToPrint = 1;
@@ -182,12 +184,10 @@ while (row > 0) {
    
      int spacesToPrint = rows - row;
 
-     // Prints the spaces before the numbers.
     for (int i = 0; i < spacesToPrint; i++) {
     System.out.print(" ");
 }
 
-  // Prints the numbers for the current row.
  for (int i = 0; i < row * 2 - 1; i++) {
             System.out.print(numberToPrint);
         }
@@ -208,8 +208,8 @@ numberToPrint++;
 
 
 
-
-    // Calls each method to display its pattern.
+     //Precondition: All functions have correct inputs
+    //Postcondition: Runs all the functions in the order they are written in the code.
      public static void main(String []args){
         System.out.println("Stars");
         System.out.println();
